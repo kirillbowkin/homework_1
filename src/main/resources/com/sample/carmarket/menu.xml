@@ -7,6 +7,7 @@
         <item screen="Model.browse" caption="msg://com.sample.carmarket.screen.model/modelBrowse.menu"/>
         <item screen="User.browse" caption="msg://com.sample.carmarket.screen.user/UserBrowse.caption"/>
         <item screen="themeSettingsScreen" caption="msg://io.jmix.ui.app.themesettings/themeSettings.caption"/>
+        <item screen="Car.browse" caption="msg://com.sample.carmarket.screen.car/carBrowse.menu"/>
     </menu>
 
 </menu-config>
