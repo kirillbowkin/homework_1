@@ -44,6 +44,7 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="markAsSold" type="itemTracking" caption="Mark as sold"/>
             </actions>
             <columns>
                 <column id="registration_number"/>
@@ -55,6 +56,7 @@
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
+                <button id="markAsSold" action="carsTable.markAsSold"/>
                 <button id="createBtn" action="carsTable.create"/>
                 <button id="editBtn" action="carsTable.edit"/>
                 <button id="removeBtn" action="carsTable.remove"/>

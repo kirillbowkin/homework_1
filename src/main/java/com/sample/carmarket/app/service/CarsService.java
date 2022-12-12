@@ -1,11 +1,14 @@
 package com.sample.carmarket.app.service;
 
+import com.sample.carmarket.entity.Car;
+import com.sample.carmarket.entity.CarStatus;
 import com.sample.carmarket.entity.EngineType;
 import io.jmix.core.DataManager;
 import io.jmix.core.entity.KeyValueEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -31,5 +34,12 @@ public class CarsService {
                         kv -> EngineType.fromId(kv.getValue("engineType")),
                         kv -> kv.<Long>getValue("count")
                 ));
+    }
+
+    public void markAsSold(Car car) {
+        car.setStatus(CarStatus.SOLD);
+        car.setDate_of_sale(LocalDate.now());
+
+        dataManager.save(car);
     }
 }
