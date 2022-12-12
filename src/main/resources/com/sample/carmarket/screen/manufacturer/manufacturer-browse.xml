@@ -37,6 +37,11 @@
                         <action id="create" type="create"/>
                         <action id="edit" type="edit"/>
                         <action id="remove" type="remove"/>
+                        <action id="calculateCars"
+                                icon="CALCULATOR"
+                                caption="Calculate Cars"
+                                type="itemTracking"
+                        />
                     </actions>
                     <columns>
                         <column id="name"/>
@@ -45,6 +50,7 @@
                     <simplePagination/>
                     <buttonsPanel id="buttonsPanel"
                                   alwaysVisible="true">
+                        <button id="calculateCars" action="table.calculateCars" />
                         <button id="createBtn" action="table.create"/>
                         <button id="editBtn" action="table.edit"/>
                         <button id="removeBtn" action="table.remove"/>
